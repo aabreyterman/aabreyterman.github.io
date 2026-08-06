@@ -77,6 +77,7 @@ function Arrow() {
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
   useEffect(() => {
     const nodes = document.querySelectorAll<HTMLElement>("[data-reveal]");
@@ -112,12 +113,12 @@ export default function Home() {
           <p className="hero-intro">I lead products, campaigns and teams from the first sketch to measurable growth — across fintech, consumer tech, agencies and international events.</p>
           <div className="hero-actions">
             <a className="button primary" href="#work">See selected work <Arrow /></a>
-            <a className="button text-button" href="/anastasiia-breiterman-cv.pdf" target="_blank">Download CV ↓</a>
+            <a className="button text-button" href={`${basePath}/anastasiia-breiterman-cv.pdf`} target="_blank">Download CV ↓</a>
           </div>
         </div>
         <div className="portrait-wrap" data-reveal>
           <div className="portrait-label"><span>Based across</span><strong>Europe · Middle East · Asia</strong></div>
-          <img src="/anastasiia-portrait.jpeg" alt="Anastasiia Breiterman" className="portrait" />
+          <img src={`${basePath}/anastasiia-portrait.jpeg`} alt="Anastasiia Breiterman" className="portrait" />
           <span className="portrait-number">05+</span>
           <span className="portrait-caption">years building<br />brands & products</span>
         </div>
@@ -232,7 +233,7 @@ export default function Home() {
         </div>
         <div className="contact-links" data-reveal>
           <a href="https://www.linkedin.com/in/anastasiia-breiterman-0229851b6/" target="_blank" rel="noreferrer">LinkedIn <Arrow /></a>
-          <a href="/anastasiia-breiterman-cv.pdf" target="_blank">CV / Résumé <Arrow /></a>
+          <a href={`${basePath}/anastasiia-breiterman-cv.pdf`} target="_blank">CV / Résumé <Arrow /></a>
         </div>
       </section>
 

@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-:root { --ink:#171714; --paper:#f3f0e8; --coral:#ff5945; --sage:#c9d0b8; --line:rgba(23,23,20,.2); }
+:root { --ink:#171714; --paper:#f3f0e8; --coral:#ff5945; --sage:#c9d0b8; --line:rgba(23,23,20,.2); --font-sans:"Helvetica Neue",Arial,sans-serif; --font-serif:Georgia,"Times New Roman",serif; }
 * { box-sizing:border-box; }
 html { scroll-behavior:smooth; }
 body { margin:0; background:var(--paper); color:var(--ink); font-family:var(--font-sans), sans-serif; }
