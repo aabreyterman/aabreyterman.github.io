@@ -187,7 +187,7 @@ export default function Home() {
         </div>
         <div className="portrait-wrap" data-reveal>
           <div className="portrait-label"><span>Based across</span><strong>Europe · Middle East · Asia</strong></div>
-          <img src={`${basePath}/anastasiia-portrait.jpeg`} alt="Anastasiia Breiterman" className="portrait" />
+          <img src={`${basePath}/anastasiia-portrait-professional-v3.png`} alt="Anastasiia Breiterman" className="portrait" />
           <span className="portrait-number">05+</span>
           <span className="portrait-caption">years building<br />brands & products</span>
         </div>
