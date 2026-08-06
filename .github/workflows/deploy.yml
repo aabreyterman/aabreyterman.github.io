@@ -34,7 +34,7 @@ jobs:
         run: npm run build:static
         env:
           STATIC_EXPORT: "true"
-          NEXT_PUBLIC_BASE_PATH: /CV-Website
+          NEXT_PUBLIC_BASE_PATH: /about
           NEXT_PUBLIC_SITE_URL: https://aabreyterman.github.io
 
       - name: Upload artifact
