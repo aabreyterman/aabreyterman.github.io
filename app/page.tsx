@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const projects = [
   {
@@ -77,7 +77,15 @@ function Arrow() {
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [contactOpen, setContactOpen] = useState(false);
+  const contactTriggerRef = useRef<HTMLButtonElement>(null);
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
+  const closeContact = () => {
+    setContactOpen(false);
+    window.setTimeout(() => contactTriggerRef.current?.focus(), 0);
+  };
 
   useEffect(() => {
     const nodes = document.querySelectorAll<HTMLElement>("[data-reveal]");
@@ -88,6 +96,24 @@ export default function Home() {
     nodes.forEach((node) => observer.observe(node));
     return () => observer.disconnect();
   }, []);
+
+  useEffect(() => {
+    if (!contactOpen) return;
+
+    const previousOverflow = document.body.style.overflow;
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") closeContact();
+    };
+
+    document.body.style.overflow = "hidden";
+    closeButtonRef.current?.focus();
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [contactOpen]);
 
   const closeMenu = () => setMenuOpen(false);
 
@@ -102,9 +128,52 @@ export default function Home() {
           <a href="#work" onClick={closeMenu}>Selected work</a>
           <a href="#experience" onClick={closeMenu}>Experience</a>
           <a href="#about" onClick={closeMenu}>About</a>
-          <a className="nav-cta" href="mailto:aabreyterman@gmail.com" onClick={closeMenu}>Let’s talk <Arrow /></a>
+          <button
+            className="nav-cta"
+            ref={contactTriggerRef}
+            onClick={() => {
+              closeMenu();
+              setContactOpen(true);
+            }}
+          >
+            Let’s talk <Arrow />
+          </button>
         </nav>
       </header>
+
+      {contactOpen && (
+        <div
+          className="contact-modal-backdrop"
+          onMouseDown={(event) => event.target === event.currentTarget && closeContact()}
+        >
+          <section className="contact-modal" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title">
+            <div className="contact-modal-top">
+              <p className="kicker">Start a conversation</p>
+              <button ref={closeButtonRef} className="contact-modal-close" onClick={closeContact} aria-label="Close contact options">
+                Close <span aria-hidden="true">×</span>
+              </button>
+            </div>
+            <h2 id="contact-modal-title">How would you like to <em>connect?</em></h2>
+            <div className="contact-options">
+              <a href="mailto:aabreyterman@gmail.com">
+                <span className="contact-option-index">01</span>
+                <span><strong>Send an email</strong><small>aabreyterman@gmail.com</small></span>
+                <Arrow />
+              </a>
+              <a href="https://www.linkedin.com/in/anastasiia-breiterman-0229851b6/" target="_blank" rel="noreferrer">
+                <span className="contact-option-index">02</span>
+                <span><strong>Connect on LinkedIn</strong><small>View professional profile</small></span>
+                <Arrow />
+              </a>
+              <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0se6dkhYlZIEqnC5nYSaKH25NP8sJgNB_7VYidYc9FMWlo5L4JnTAMJ3yOIXcxO0mO8LTTTjsF" target="_blank" rel="noreferrer">
+                <span className="contact-option-index">03</span>
+                <span><strong>Book a call</strong><small>Choose a time that works for you</small></span>
+                <Arrow />
+              </a>
+            </div>
+          </section>
+        </div>
+      )}
 
       <section className="hero" id="top">
         <div className="hero-copy" data-reveal>

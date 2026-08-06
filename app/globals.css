@@ -15,9 +15,26 @@ button { font:inherit; }
 .nav a:not(.nav-cta) { position:relative; }
 .nav a:not(.nav-cta)::after { content:""; position:absolute; left:0; bottom:-5px; width:100%; height:1px; background:var(--ink); transform:scaleX(0); transform-origin:right; transition:transform .3s ease; }
 .nav a:hover::after { transform:scaleX(1); transform-origin:left; }
-.nav-cta { padding:.72rem 1.05rem; border:1px solid var(--ink); display:flex; gap:1rem; transition:.25s; }
+.nav-cta { padding:.72rem 1.05rem; border:1px solid var(--ink); background:transparent; color:inherit; display:flex; align-items:center; gap:1rem; transition:.25s; cursor:pointer; }
 .nav-cta:hover { background:var(--ink); color:var(--paper); }
 .menu-button { display:none; border:0; background:none; }
+
+.contact-modal-backdrop { position:fixed; z-index:100; inset:0; display:grid; place-items:center; padding:24px; background:rgba(23,23,20,.64); backdrop-filter:blur(12px); animation:modal-fade .25s ease both; }
+.contact-modal { width:min(760px,100%); max-height:calc(100svh - 48px); overflow:auto; padding:2rem; background:var(--paper); border:1px solid var(--ink); box-shadow:14px 14px 0 var(--coral); animation:modal-rise .38s cubic-bezier(.2,.75,.2,1) both; }
+.contact-modal-top { display:flex; justify-content:space-between; align-items:center; gap:2rem; padding-bottom:1.3rem; border-bottom:1px solid var(--line); }
+.contact-modal-close { border:0; background:transparent; padding:.4rem 0; text-transform:uppercase; letter-spacing:.12em; font-size:.68rem; font-weight:700; cursor:pointer; }
+.contact-modal-close span { display:inline-block; margin-left:.45rem; color:var(--coral); font-size:1.1rem; line-height:.7; }
+.contact-modal h2 { max-width:650px; margin:2.2rem 0 2.7rem; font-size:clamp(3rem,7vw,5.8rem); line-height:.88; letter-spacing:-.06em; font-weight:550; }
+.contact-modal h2 em { font-family:var(--font-serif); font-weight:400; color:var(--coral); }
+.contact-options { border-top:1px solid var(--ink); }
+.contact-options a { display:grid; grid-template-columns:52px 1fr auto; align-items:center; gap:1rem; padding:1.25rem .4rem; border-bottom:1px solid var(--line); transition:padding .25s ease,background .25s ease,color .25s ease; }
+.contact-options a:hover,.contact-options a:focus-visible { padding-inline:1rem; background:var(--ink); color:var(--paper); outline:none; }
+.contact-option-index { font-family:var(--font-serif); color:var(--coral); font-size:1.25rem; }
+.contact-options a > span:nth-child(2) { display:flex; flex-direction:column; gap:.25rem; }
+.contact-options strong { font-size:1rem; }
+.contact-options small { color:#706f65; font-size:.75rem; }
+.contact-options a:hover small,.contact-options a:focus-visible small { color:#c9c6bb; }
+.contact-options a > span:last-child { font-size:1.15rem; }
 
 .hero { min-height:100svh; padding:140px 4vw 52px; display:grid; grid-template-columns:minmax(0,1.15fr) minmax(360px,.85fr); gap:5vw; align-items:center; position:relative; overflow:hidden; }
 .hero::before { content:""; position:absolute; width:420px; height:420px; border:1px solid var(--line); border-radius:50%; left:-280px; top:22%; }
@@ -119,6 +136,8 @@ footer { padding:1.25rem 4vw; background:var(--ink); color:var(--paper); display
 [data-reveal].is-visible { opacity:1; transform:none; }
 @keyframes pulse { 70% { box-shadow:0 0 0 9px rgba(255,89,69,0); } 100% { box-shadow:0 0 0 0 rgba(255,89,69,0); } }
 @keyframes bounce { 50% { transform:translateY(6px); } }
+@keyframes modal-fade { from { opacity:0; } }
+@keyframes modal-rise { from { opacity:0; transform:translateY(24px) scale(.98); } }
 
 @media (max-width:900px) {
   .site-header { height:66px; }
@@ -166,6 +185,11 @@ footer { padding:1.25rem 4vw; background:var(--ink); color:var(--paper); display
   .contact { padding:5rem 20px; grid-template-columns:1fr; gap:4rem; }
   .contact-email { font-size:1rem; overflow-wrap:anywhere; }
   .contact-links { align-items:flex-start; }
+  .contact-modal-backdrop { align-items:end; padding:12px; }
+  .contact-modal { max-height:calc(100svh - 24px); padding:1.35rem; box-shadow:7px 7px 0 var(--coral); }
+  .contact-modal h2 { margin:1.8rem 0 2rem; font-size:clamp(2.8rem,15vw,4.5rem); }
+  .contact-options a { grid-template-columns:38px 1fr auto; padding:1.1rem .2rem; }
+  .contact-options small { font-size:.68rem; }
   footer { padding:1.5rem 20px; flex-direction:column; }
 }
 
