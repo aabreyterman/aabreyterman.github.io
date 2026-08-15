@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Script from "next/script";
 
 const projects = [
   {
@@ -66,7 +67,7 @@ const experience = [
 
 const skills = [
   ["Direction", "Go-to-market strategy", "Brand positioning", "Business development", "Strategic planning"],
-  ["Delivery", "Project management", "Agile workflows", "Cross-functional leadership", "Vendor coordination"],
+  ["Delivery", "PMP®-certified project leadership", "Agile & predictive delivery", "Cross-functional leadership", "Risk & stakeholder management"],
   ["Growth", "Performance marketing", "Community building", "Partnerships", "Content & PR"],
   ["Toolbox", "Notion · Miro · Trello", "Figma · Tilda", "Adobe Creative Suite", "MS Project"],
 ];
@@ -127,6 +128,7 @@ export default function Home() {
         <nav className={menuOpen ? "nav is-open" : "nav"} aria-label="Primary navigation">
           <a href="#work" onClick={closeMenu}>Selected work</a>
           <a href="#experience" onClick={closeMenu}>Experience</a>
+          <a href="#certification" onClick={closeMenu}>PMP®</a>
           <a href="#about" onClick={closeMenu}>About</a>
           <button
             className="nav-cta"
@@ -177,13 +179,18 @@ export default function Home() {
 
       <section className="hero" id="top">
         <div className="hero-copy" data-reveal>
-          <p className="eyebrow"><span className="pulse" /> Project · Marketing · Growth</p>
+          <p className="eyebrow"><span className="pulse" /> PMP® Certified · Project · Marketing · Growth</p>
           <h1>I turn ambitious ideas into <em>traction.</em></h1>
-          <p className="hero-intro">I lead products, campaigns and teams from the first sketch to measurable growth — across fintech, consumer tech, agencies and international events.</p>
+          <p className="hero-intro">I’m a PMP®-certified project and marketing leader, taking products, campaigns and teams from the first sketch to measurable growth across fintech, consumer tech, agencies and international events.</p>
           <div className="hero-actions">
             <a className="button primary" href="#work">See selected work <Arrow /></a>
             <a className="button text-button" href={`${basePath}/anastasiia-breiterman-cv.pdf`} target="_blank">Download CV ↓</a>
           </div>
+          <a className="hero-pmp" href="https://www.credly.com/badges/bf106bb5-dbd1-460e-82c0-2af6b0ce27b0/public_url" target="_blank" rel="noreferrer" aria-label="Verify Anastasiia Breiterman's PMP certification on Credly">
+            <img src={`${basePath}/pmp-badge.png`} alt="Project Management Professional PMP badge" />
+            <span><strong>Project Management Professional (PMP)®</strong><small>AT · AT · AT performance</small></span>
+            <Arrow />
+          </a>
         </div>
         <div className="portrait-wrap" data-reveal>
           <div className="portrait-label"><span>Based across</span><strong>Europe · Middle East · Asia</strong></div>
@@ -197,8 +204,8 @@ export default function Home() {
       <section className="proof-strip" aria-label="Career highlights">
         <div><strong>30K+</strong><span>Product installs</span></div>
         <div><strong>8</strong><span>Platforms managed</span></div>
-        <div><strong>4</strong><span>Markets delivered in</span></div>
-        <div><strong>C2</strong><span>English proficiency</span></div>
+        <div className="proof-pmp"><strong>PMP®</strong><span>Certified professional</span></div>
+        <div><strong>AT×3</strong><span>AT / AT / AT exam result</span></div>
       </section>
 
       <section className="section projects" id="work">
@@ -265,6 +272,46 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="section pmp-feature" id="certification">
+        <div className="pmp-badge-panel" data-reveal>
+          <p className="kicker">Verified by PMI × Credly</p>
+          <div className="credly-badge-embed">
+            <div
+              data-iframe-width="150"
+              data-iframe-height="270"
+              data-share-badge-id="bf106bb5-dbd1-460e-82c0-2af6b0ce27b0"
+              data-share-badge-host="https://www.credly.com"
+            />
+          </div>
+          <Script id="credly-badge-script" src="https://cdn.credly.com/assets/utilities/embed.js" strategy="afterInteractive" />
+          <a className="pmp-verify-link" href="https://www.credly.com/badges/bf106bb5-dbd1-460e-82c0-2af6b0ce27b0/public_url" target="_blank" rel="noreferrer">
+            Verify on Credly <Arrow />
+          </a>
+        </div>
+
+        <div className="pmp-feature-copy" data-reveal>
+          <p className="kicker">Professional certification</p>
+          <h2>Project leadership,<br /><em>verified.</em></h2>
+          <p className="pmp-intro">Certified as a Project Management Professional (PMP)® by the Project Management Institute, with Above Target performance across all three exam domains.</p>
+
+          <div className="pmp-scores" aria-label="PMP exam performance by domain">
+            <div><span>People</span><strong>AT</strong><small>Above Target</small></div>
+            <div><span>Process</span><strong>AT</strong><small>Above Target</small></div>
+            <div><span>Business environment</span><strong>AT</strong><small>Above Target</small></div>
+          </div>
+
+          <dl className="pmp-details">
+            <div><dt>Granted</dt><dd>14 August 2026</dd></div>
+            <div><dt>Valid through</dt><dd>14 August 2029</dd></div>
+            <div><dt>Certification no.</dt><dd>4500992</dd></div>
+          </dl>
+
+          <a className="button primary pmp-certificate-link" href={`${basePath}/anastasiia-breiterman-pmp-certificate.pdf`} target="_blank" rel="noreferrer">
+            View certificate <Arrow />
+          </a>
+        </div>
+      </section>
+
       <section className="section credentials">
         <div className="education" data-reveal>
           <p className="kicker">Education</p>
@@ -285,6 +332,7 @@ export default function Home() {
         <div className="awards" data-reveal>
           <p className="kicker">Selected recognition</p>
           <ul>
+            <li><span>2026</span><strong>Project Management Professional (PMP)®</strong><small>PMI · AT / AT / AT</small></li>
             <li><span>2023</span><strong>Philips Innovation Award semi-finalist</strong><small>HeartLoop</small></li>
             <li><span>2023</span><strong>ACE Incubator cohort</strong><small>HeartLoop</small></li>
             <li><span>2021</span><strong>Startup Ring winner</strong><small>€1,500 grant</small></li>
@@ -306,7 +354,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer><span>© {new Date().getFullYear()} Anastasiia Breiterman</span><span>Strategy · Structure · Momentum</span><a href="#top">Back to top ↑</a></footer>
+      <footer><span>© {new Date().getFullYear()} Anastasiia Breiterman, PMP®</span><span>Strategy · Structure · Momentum</span><a href="#top">Back to top ↑</a></footer>
     </main>
   );
 }
