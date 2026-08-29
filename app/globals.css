@@ -109,7 +109,7 @@ h1 em,h2 em { font-family:var(--font-serif), serif; font-weight:400; color:var(-
 .place { text-align:right; color:#77756a; }
 
 .skills { background:#d7ddc8; }
-.skills-grid { display:grid; grid-template-columns:repeat(4,1fr); border-top:1px solid var(--ink); border-left:1px solid var(--ink); }
+.skills-grid { display:grid; grid-template-columns:repeat(3,1fr); border-top:1px solid var(--ink); border-left:1px solid var(--ink); }
 .skills-grid article { padding:2rem; min-height:330px; border-right:1px solid var(--ink); border-bottom:1px solid var(--ink); transition:background .3s, color .3s, transform .3s; transition-delay:var(--delay); }
 .skills-grid article:hover { background:var(--ink); color:var(--paper); transform:translateY(-8px); }
 .skills-grid article > span { font-family:var(--font-serif); color:var(--coral); font-size:2rem; }
@@ -146,6 +146,7 @@ h1 em,h2 em { font-family:var(--font-serif), serif; font-weight:400; color:var(-
 .education-item h3 { font-size:1.25rem; max-width:560px; margin:.7rem 0; }
 .education-item p { color:#55544b; margin:.3rem 0; }
 .education-item strong { color:var(--coral); font-family:var(--font-serif); font-size:1.25rem; font-weight:400; }
+.education-item.exchange-item strong { font-size:1.05rem; }
 .awards { padding-top:.4rem; }
 .awards ul { list-style:none; padding:0; margin:2rem 0 0; border-top:1px solid var(--ink); }
 .awards li { display:grid; grid-template-columns:58px 1fr; gap:.25rem 1rem; padding:1.3rem 0; border-bottom:1px solid var(--line); }

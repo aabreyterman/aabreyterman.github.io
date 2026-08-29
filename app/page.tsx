@@ -11,8 +11,8 @@ const projects = [
     period: "2025 — present",
     tag: "Fintech · Dubai",
     description:
-      "Leading brand positioning, go-to-market strategy, creative direction, partnerships and retention for a trading psychology platform built around better habits — not hype.",
-    metrics: ["30K+ installs", "1.3K+ community", "6× major press quotes"],
+      "Leading brand positioning, go-to-market strategy, creative direction, partnerships and retention for a trading psychology platform scaled to 40K+ installs within four months.",
+    metrics: ["40K+ installs", "4 months to 40K+", "1.3K+ community"],
     link: "https://pnlapp.co/",
     linkLabel: "Explore PnL",
   },
@@ -32,7 +32,7 @@ const projects = [
     index: "03",
     name: "Unika Agency",
     role: "Partner · Head of International Strategy",
-    period: "Current",
+    period: "Sep 2025 — Feb 2026",
     tag: "Growth agency · Tashkent",
     description:
       "Leading international expansion for a boutique digital agency spanning strategy, paid acquisition, creative production, automation and funnel optimisation.",
@@ -57,19 +57,21 @@ const projects = [
 const experience = [
   ["2025 — now", "PnL App", "Chief Marketing Officer", "Dubai"],
   ["2022 — now", "Kintz / HeartLoop", "Co-founder, Marketing & Product", "Amsterdam"],
-  ["Current", "Unika Agency", "Partner, Head of International Strategy", "Tashkent"],
+  ["Sep 2025 — Feb 2026", "Unika Agency", "Partner, Head of International Strategy", "Tashkent"],
   ["2025 — 2026", "Searix", "Event Tech Business Manager", "Singapore"],
-  ["2022 — 2023", "x-onevision", "Business Developer", "United Kingdom"],
+  ["2022 — 2023", "x-one.vision", "Business Developer", "United Kingdom"],
   ["2022 — 2023", "Forward Incubator", "Student Business Consultant", "Amsterdam"],
   ["2021 — 2022", "O2 Consulting", "Marketing, SMM & Events Specialist", "Russia"],
   ["2020 — 2021", "Soul Book", "Co-founder", "Russia"],
 ];
 
 const skills = [
-  ["Direction", "Go-to-market strategy", "Brand positioning", "Business development", "Strategic planning"],
-  ["Delivery", "PMP®-certified project leadership", "Agile & predictive delivery", "Cross-functional leadership", "Risk & stakeholder management"],
-  ["Growth", "Performance marketing", "Community building", "Partnerships", "Content & PR"],
-  ["Toolbox", "Notion · Miro · Trello", "Figma · Tilda", "Adobe Creative Suite", "MS Project"],
+  ["Project delivery", "Agile & predictive methods", "Planning, scope & scheduling", "Risk, issue & dependency management", "Status reporting & delivery governance"],
+  ["Stakeholders & leadership", "Cross-functional leadership", "Stakeholder mapping & engagement", "Facilitation & negotiation", "Client, vendor & team alignment"],
+  ["Soft skills", "Communication & collaboration", "Problem-solving & prioritisation", "Adaptability & creative thinking", "Ownership & decision-making"],
+  ["AI & productivity", "ChatGPT & Claude", "Prompt design", "AI-assisted research & analysis", "Content development & workflow automation"],
+  ["Tools", "Notion · Miro · Trello", "MS Project", "Slack · Discord", "Figma · Tilda"],
+  ["Marketing & creative", "Go-to-market & integrated campaigns", "Audience research & community", "PR & partnerships", "Adobe Photoshop & Illustrator"],
 ];
 
 function Arrow() {
@@ -162,7 +164,7 @@ export default function Home() {
                 <span><strong>Send an email</strong><small>aabreyterman@gmail.com</small></span>
                 <Arrow />
               </a>
-              <a href="https://www.linkedin.com/in/anastasiia-breiterman-0229851b6/" target="_blank" rel="noreferrer">
+              <a href="https://www.linkedin.com/in/anastasiiabreiterman/" target="_blank" rel="noreferrer">
                 <span className="contact-option-index">02</span>
                 <span><strong>Connect on LinkedIn</strong><small>View professional profile</small></span>
                 <Arrow />
@@ -188,7 +190,7 @@ export default function Home() {
           </div>
           <a className="hero-pmp" href="https://www.credly.com/badges/bf106bb5-dbd1-460e-82c0-2af6b0ce27b0/public_url" target="_blank" rel="noreferrer" aria-label="Verify Anastasiia Breiterman's PMP certification on Credly">
             <img src={`${basePath}/pmp-badge.png`} alt="Project Management Professional PMP badge" />
-            <span><strong>Project Management Professional (PMP)®</strong><small>AT · AT · AT performance</small></span>
+            <span><strong>Project Management Professional (PMP)®</strong><small>Verified by PMI × Credly</small></span>
             <Arrow />
           </a>
         </div>
@@ -202,10 +204,10 @@ export default function Home() {
       </section>
 
       <section className="proof-strip" aria-label="Career highlights">
-        <div><strong>30K+</strong><span>Product installs</span></div>
+        <div><strong>40K+</strong><span>Installs in 4 months</span></div>
         <div><strong>8</strong><span>Platforms managed</span></div>
         <div className="proof-pmp"><strong>PMP®</strong><span>Certified professional</span></div>
-        <div><strong>AT×3</strong><span>AT / AT / AT exam result</span></div>
+        <div><strong>05+</strong><span>Years building products</span></div>
       </section>
 
       <section className="section projects" id="work">
@@ -328,16 +330,32 @@ export default function Home() {
             <p>BSc International Business & Management</p>
             <strong>9.52 / 10 · summa cum laude</strong>
           </div>
+          <div className="education-item exchange-item">
+            <span>2021 · International exchange</span>
+            <h3>Uppsala University · Sweden</h3>
+            <p>Exchange mobility programme</p>
+            <strong>HSE Endowment Fund Scholarship</strong>
+          </div>
+          <div className="education-item exchange-item">
+            <span>2020 · International exchange</span>
+            <h3>University of Hertfordshire · United Kingdom</h3>
+            <p>Business Administration exchange</p>
+            <strong>Erasmus+ Key Action 107 Scholarship</strong>
+          </div>
         </div>
         <div className="awards" data-reveal>
-          <p className="kicker">Selected recognition</p>
+          <p className="kicker">Recognition & awards</p>
           <ul>
             <li><span>2026</span><strong>Project Management Professional (PMP)®</strong><small>PMI · AT / AT / AT</small></li>
-            <li><span>2023</span><strong>Philips Innovation Award semi-finalist</strong><small>HeartLoop</small></li>
-            <li><span>2023</span><strong>ACE Incubator cohort</strong><small>HeartLoop</small></li>
-            <li><span>2021</span><strong>Startup Ring winner</strong><small>€1,500 grant</small></li>
+            <li><span>2023–24</span><strong>ACE Incubator selected cohort</strong><small>Kintz / HeartLoop</small></li>
+            <li><span>2023</span><strong>Philips Innovation Award semi-finalist</strong><small>Kintz / HeartLoop</small></li>
+            <li><span>2021</span><strong>Published research</strong><small>333-participant study of digital work</small></li>
+            <li><span>2020</span><strong>HSE Startup Ring winner</strong><small>€1,500 grant</small></li>
             <li><span>2020</span><strong>Oliver Wyman Impact semi-finalist</strong><small>Case championship</small></li>
-            <li><span>2020</span><strong>Hult Prize semi-finalist</strong><small>London</small></li>
+            <li><span>2020</span><strong>Award of Excellence</strong><small>Current Trends in Management and Logistics conference</small></li>
+            <li><span>2020</span><strong>Hult Prize semi-final selection</strong><small>London</small></li>
+            <li><span>2019</span><strong>Cup Moscow case championship</strong><small>Top 15% of solutions</small></li>
+            <li><span>—</span><strong>Galina Starovoitova Young Authors Contest winner</strong><small>Scientific work published in the contest collection</small></li>
           </ul>
         </div>
       </section>
@@ -349,7 +367,7 @@ export default function Home() {
           <a className="contact-email" href="mailto:aabreyterman@gmail.com">aabreyterman@gmail.com <Arrow /></a>
         </div>
         <div className="contact-links" data-reveal>
-          <a href="https://www.linkedin.com/in/anastasiia-breiterman-0229851b6/" target="_blank" rel="noreferrer">LinkedIn <Arrow /></a>
+          <a href="https://www.linkedin.com/in/anastasiiabreiterman/" target="_blank" rel="noreferrer">LinkedIn <Arrow /></a>
           <a href={`${basePath}/anastasiia-breiterman-cv.pdf`} target="_blank">CV / Résumé <Arrow /></a>
         </div>
       </section>
