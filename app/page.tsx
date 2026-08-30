@@ -1,17 +1,16 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import Script from "next/script";
 
 const projects = [
   {
     index: "01",
     name: "PnL App",
     role: "Chief Marketing Officer",
-    period: "2025 — present",
+    period: "Apr 2025 — present",
     tag: "Fintech · Dubai",
     description:
-      "Leading brand positioning, go-to-market strategy, creative direction, partnerships and retention for a trading psychology platform scaled to 40K+ installs within four months.",
+      "Drove brand positioning, go-to-market strategy, creative direction, partnerships and retention for a trading psychology platform scaled to 40K+ installs within four months.",
     metrics: ["40K+ installs", "4 months to 40K+", "1.3K+ community"],
     link: "https://pnlapp.co/",
     linkLabel: "Explore PnL",
@@ -20,10 +19,10 @@ const projects = [
     index: "02",
     name: "Kintz",
     role: "Co-founder · Marketing & Product",
-    period: "2022 — present",
+    period: "Dec 2022 — present",
     tag: "Consumer tech · Amsterdam",
     description:
-      "Co-founded and repositioned HeartLoop into Kintz, a healing and community product for life after a breakup. Built the brand story, launch strategy and early market presence.",
+      "Led the 0-to-1 brand and product repositioning from HeartLoop to Kintz, shaping the customer proposition, launch strategy and early market presence while advancing through two recognised innovation programmes.",
     metrics: ["PHIA semi-finalist", "ACE Incubator cohort", "0→1 brand rebuild"],
     link: "https://kintzapp.com/",
     linkLabel: "Visit Kintz",
@@ -35,7 +34,7 @@ const projects = [
     period: "Sep 2025 — Feb 2026",
     tag: "Growth agency · Tashkent",
     description:
-      "Leading international expansion for a boutique digital agency spanning strategy, paid acquisition, creative production, automation and funnel optimisation.",
+      "Directed international growth strategy for a boutique digital agency, aligning positioning, paid acquisition, creative production, automation and funnel optimisation around client outcomes.",
     metrics: ["Global expansion", "Full-funnel strategy", "Creative × performance"],
     link: "https://unika-agency.com/",
     linkLabel: "Visit Unika",
@@ -44,10 +43,10 @@ const projects = [
     index: "04",
     name: "Searix",
     role: "Event Tech Business Manager",
-    period: "2025 — 2026",
+    period: "Sep 2025 — May 2026",
     tag: "Event technology · Singapore",
     description:
-      "Managed technology-led event projects across Dubai and Singapore — from client acquisition and proposals to vendors, project plans and on-site delivery.",
+      "Delivered technology-led event projects across Dubai and Singapore, owning the path from client brief and proposal through project planning, vendor coordination and on-site execution.",
     metrics: ["2 regional markets", "B2B sales", "End-to-end delivery"],
     link: "https://searix.net/",
     linkLabel: "Visit Searix",
@@ -55,10 +54,10 @@ const projects = [
 ];
 
 const experience = [
-  ["2025 — now", "PnL App", "Chief Marketing Officer", "Dubai"],
-  ["2022 — now", "Kintz / HeartLoop", "Co-founder, Marketing & Product", "Amsterdam"],
+  ["Apr 2025 — now", "PnL App", "Chief Marketing Officer", "Dubai"],
+  ["Dec 2022 — now", "Kintz / HeartLoop", "Co-founder, Marketing & Product", "Amsterdam"],
+  ["Sep 2025 — May 2026", "Searix", "Event Tech Business Manager", "Singapore"],
   ["Sep 2025 — Feb 2026", "Unika Agency", "Partner, Head of International Strategy", "Tashkent"],
-  ["2025 — 2026", "Searix", "Event Tech Business Manager", "Singapore"],
   ["2022 — 2023", "x-one.vision", "Business Developer", "United Kingdom"],
   ["2022 — 2023", "Forward Incubator", "Student Business Consultant", "Amsterdam"],
   ["2021 — 2022", "O2 Consulting", "Marketing, SMM & Events Specialist", "Russia"],
@@ -66,7 +65,7 @@ const experience = [
 ];
 
 const skills = [
-  ["Project delivery", "Agile & predictive methods", "Planning, scope & scheduling", "Risk, issue & dependency management", "Status reporting & delivery governance"],
+  ["Project delivery", "Agile & predictive methods", "Planning, scope & scheduling", "Risk, issue & dependency management", "Budget & resource coordination", "Status reporting & delivery governance"],
   ["Stakeholders & leadership", "Cross-functional leadership", "Stakeholder mapping & engagement", "Facilitation & negotiation", "Client, vendor & team alignment"],
   ["Soft skills", "Communication & collaboration", "Problem-solving & prioritisation", "Adaptability & creative thinking", "Ownership & decision-making"],
   ["AI & productivity", "ChatGPT & Claude", "Prompt design", "AI-assisted research & analysis", "Content development & workflow automation"],
@@ -183,7 +182,12 @@ export default function Home() {
         <div className="hero-copy" data-reveal>
           <p className="eyebrow"><span className="pulse" /> PMP® Certified · Project · Marketing · Growth</p>
           <h1>I turn ambitious ideas into <em>traction.</em></h1>
-          <p className="hero-intro">I’m a PMP®-certified project and marketing leader, taking products, campaigns and teams from the first sketch to measurable growth across fintech, consumer tech, agencies and international events.</p>
+          <p className="hero-intro">I’m a PMP®-certified project leader with 5+ years of international experience, translating complex ideas into structured delivery and measurable growth across digital products, technology, marketing and events.</p>
+          <ul className="hero-competencies" aria-label="Core project management strengths">
+            <li>Project planning & delivery</li>
+            <li>Stakeholder leadership</li>
+            <li>Product & launch execution</li>
+          </ul>
           <div className="hero-actions">
             <a className="button primary" href="#work">See selected work <Arrow /></a>
             <a className="button text-button" href={`${basePath}/anastasiia-breiterman-cv.pdf`} target="_blank">Download CV ↓</a>
@@ -212,9 +216,9 @@ export default function Home() {
 
       <section className="section projects" id="work">
         <div className="section-heading" data-reveal>
-          <p className="kicker">Selected work</p>
+          <p className="kicker">Selected impact</p>
           <h2>Strategy is only useful when it <em>moves.</em></h2>
-          <p>Four chapters where positioning, people and delivery came together.</p>
+          <p>Four examples of turning ambiguity into launches, growth and cross-border delivery.</p>
         </div>
         <div className="project-list">
           {projects.map((project) => (
@@ -285,7 +289,7 @@ export default function Home() {
               data-share-badge-host="https://www.credly.com"
             />
           </div>
-          <Script id="credly-badge-script" src="https://cdn.credly.com/assets/utilities/embed.js" strategy="afterInteractive" />
+          <script id="credly-badge-script" async src="https://cdn.credly.com/assets/utilities/embed.js" />
           <a className="pmp-verify-link" href="https://www.credly.com/badges/bf106bb5-dbd1-460e-82c0-2af6b0ce27b0/public_url" target="_blank" rel="noreferrer">
             Verify on Credly <Arrow />
           </a>
