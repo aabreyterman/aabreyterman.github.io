@@ -240,7 +240,8 @@ footer { display:flex; justify-content:space-between; gap:1rem; padding:1.3rem 4
 }
 
 /* Operator board: a single aligned rhythm for experience, expertise and education. */
-:root { --paper:#f3eadc; --blue:#2f44d8; --blue-light:#e1e4fb; --line:#bfb6a9; }
+:root { --paper:#efebe5; --blue:#2f44d8; --blue-light:#e1e4fb; --line:#bbb6ae; }
+.site-header { background:var(--paper); }
 .portrait-wrap::before { inset:8% 0 2% 9%; background:#ddc6a7; transform:rotate(1.2deg); }
 .portrait { filter:saturate(1.03) contrast(1.01); border-color:#4a3b2c; }
 .portrait-label { color:var(--ink); background:#f3eadc; border:1px solid var(--ink); }
@@ -272,6 +273,10 @@ footer { display:flex; justify-content:space-between; gap:1rem; padding:1.3rem 4
 .expertise-list > div { padding:1rem 0; border-bottom:1px solid var(--line); }
 .expertise-list strong { display:block; color:var(--blue); font-size:.76rem; text-transform:uppercase; letter-spacing:.08em; }
 .expertise-list p { margin:.45rem 0 0; font-size:.78rem; line-height:1.45; }
+.skill-summary { display:grid; grid-template-columns:1fr 1fr; gap:.55rem; margin-top:1rem; }
+.skill-summary > div { padding:.75rem; border:1px solid var(--line); border-radius:12px; }
+.skill-summary strong { display:block; color:var(--blue); font-size:.63rem; letter-spacing:.07em; text-transform:uppercase; }
+.skill-summary p { margin:.4rem 0 0; font-size:.67rem; line-height:1.4; }
 .tool-heading { display:flex; justify-content:space-between; align-items:center; margin-top:1.2rem; padding-bottom:.7rem; border-bottom:1px solid var(--ink); font-size:.66rem; font-weight:800; letter-spacing:.08em; text-transform:uppercase; }
 .tool-heading span:last-child { color:var(--blue); }
 .tool-cloud { display:flex; flex-wrap:wrap; gap:.38rem; padding-top:1rem; }
@@ -286,6 +291,9 @@ footer { display:flex; justify-content:space-between; gap:1rem; padding:1.3rem 4
 .education-card:nth-child(2) p { color:#665e54; }
 .education-card strong { color:#9aabff; font-family:var(--font-serif); font-size:1.1rem; font-weight:400; }
 .education-card:nth-child(2) strong { color:var(--blue); }
+.education-card.exchange-card { color:var(--ink); background:#e6e0d7; }
+.education-card.exchange-card p { color:#675f56; }
+.education-card.exchange-card strong { color:var(--blue); font-size:.92rem; }
 .education-note { padding:1rem; border:1px solid var(--line); border-radius:14px; }
 .education-note p { margin:0; font-size:.72rem; line-height:1.45; }
 .board-cv-link { display:flex; justify-content:space-between; margin-top:1rem; padding:.75rem 0; border-top:1px solid var(--ink); border-bottom:1px solid var(--ink); color:var(--blue); font-size:.68rem; font-weight:800; letter-spacing:.07em; text-transform:uppercase; }
@@ -319,5 +327,6 @@ footer { display:flex; justify-content:space-between; gap:1rem; padding:1.3rem 4
   .education-panel { grid-column:auto; }
   .education-cards { grid-template-columns:1fr; }
   .board-panel h2 { font-size:2.7rem; }
+  .skill-summary { grid-template-columns:1fr; }
   .recognition-section { grid-template-columns:1fr; gap:2rem; padding:5rem 20px; }
 }

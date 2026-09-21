@@ -172,7 +172,7 @@ export default function Home() {
       <section className="hero" id="top">
         <div className="hero-copy" data-reveal>
           <div className="hero-fileline"><span>AB / 2026</span><span>Open to global roles</span></div>
-          <p className="eyebrow"><span className="pulse" /> Project / Product Manager · Business Development</p>
+          <p className="eyebrow"><span className="pulse" /> Project / Product Management · Marketing · Business Development</p>
           <h1>Complex work,<br /><em>made usable.</em></h1>
           <p className="hero-intro">I’m a PMP®-certified project and product manager with 5+ years of international experience. My work sits where product, delivery, marketing and business development meet: getting the plan clear, the people aligned and the launch out into the world.</p>
           <ul className="hero-competencies" aria-label="Core project management strengths">
@@ -182,7 +182,7 @@ export default function Home() {
           </ul>
           <div className="hero-actions">
             <a className="button primary" href="#work">See selected work <Arrow /></a>
-            <a className="button text-button" href={`${basePath}/anastasiia-breiterman-cv.pdf`} target="_blank">Download CV ↓</a>
+            <a className="button text-button" href={`${basePath}/anastasiia-breiterman-cv-2026.pdf`} target="_blank">Download CV ↓</a>
           </div>
           <a className="hero-pmp" href="https://www.credly.com/badges/bf106bb5-dbd1-460e-82c0-2af6b0ce27b0/public_url" target="_blank" rel="noreferrer" aria-label="Verify Anastasiia Breiterman's PMP certification on Credly">
             <img src={`${basePath}/pmp-badge.png`} alt="Project Management Professional PMP badge" />
@@ -241,7 +241,7 @@ export default function Home() {
         <div className="board-bar">
           <span className="board-mark">AB.</span>
           <span>Operating profile</span>
-          <span>Project · Product · Growth</span>
+          <span>Project Management · Marketing</span>
         </div>
         <div className="board-grid">
           <article className="board-panel experience-panel" data-reveal>
@@ -266,10 +266,14 @@ export default function Home() {
               <div><strong>People</strong><p>Client and vendor alignment, cross-functional work, clear communication and practical decisions.</p></div>
               <div><strong>Growth</strong><p>Positioning, go-to-market, product education, user feedback, partnerships and community insight.</p></div>
             </div>
+            <div className="skill-summary">
+              <div><strong>Hard skills</strong><p>Product discovery, launch planning, web design, Figma, content systems, automation and performance reporting.</p></div>
+              <div><strong>Soft skills</strong><p>Ownership, prioritisation, taste, negotiation, creative problem-solving and calm stakeholder communication.</p></div>
+            </div>
             <div className="tool-heading"><span>Tools I use every week</span><Arrow /></div>
             <div className="tool-cloud" aria-label="Tools">
               {["ChatGPT", "Claude", "Notion", "Google Workspace", "Make", "Zapier", "Airtable", "Asana", "Slack", "Loom", "Figma", "Miro", "Lucidchart", "Trello", "MS Project", "Discord", "Tilda", "Adobe"].map((tool, i) => (
-                <span className={i === 0 || i === 4 || i === 10 ? "is-accent" : ""} key={tool}>{tool}</span>
+                <span className={i <= 4 || i === 10 ? "is-accent" : ""} key={tool}>{tool}</span>
               ))}
             </div>
           </article>
@@ -290,12 +294,20 @@ export default function Home() {
                 <p>BSc International Business & Management</p>
                 <strong>9.52 / 10 · summa cum laude</strong>
               </div>
-              <div className="education-note">
-                <span>International learning</span>
-                <p>Exchange programmes at Uppsala University and the University of Hertfordshire.</p>
+              <div className="education-card exchange-card">
+                <span>2021 · International exchange</span>
+                <h3>Uppsala University · Sweden</h3>
+                <p>Exchange mobility programme</p>
+                <strong>HSE Endowment Fund Scholarship</strong>
+              </div>
+              <div className="education-card exchange-card">
+                <span>2020 · International exchange</span>
+                <h3>University of Hertfordshire · United Kingdom</h3>
+                <p>Business Administration exchange</p>
+                <strong>Erasmus+ Key Action 107 Scholarship</strong>
               </div>
             </div>
-            <a className="board-cv-link" href={`${basePath}/anastasiia-breiterman-cv.pdf`} target="_blank">View full CV <Arrow /></a>
+            <a className="board-cv-link" href={`${basePath}/anastasiia-breiterman-cv-2026.pdf`} target="_blank">View full CV <Arrow /></a>
           </article>
         </div>
       </section>
@@ -358,11 +370,11 @@ export default function Home() {
         </div>
         <div className="contact-links" data-reveal>
           <a href="https://www.linkedin.com/in/anastasiiabreiterman/" target="_blank" rel="noreferrer">LinkedIn <Arrow /></a>
-          <a href={`${basePath}/anastasiia-breiterman-cv.pdf`} target="_blank">CV / Résumé <Arrow /></a>
+          <a href={`${basePath}/anastasiia-breiterman-cv-2026.pdf`} target="_blank">CV / Résumé <Arrow /></a>
         </div>
       </section>
 
-      <footer><span>© {new Date().getFullYear()} Anastasiia Breiterman, PMP®</span><span>Strategy · Structure · Momentum</span><a href="#top">Back to top ↑</a></footer>
+      <footer><span>© {new Date().getFullYear()} Anastasiia Breiterman, PMP®</span><span>Project · Product · Marketing</span><a href="#top">Back to top ↑</a></footer>
     </main>
   );
 }
