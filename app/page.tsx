@@ -64,15 +64,6 @@ const experience = [
   ["2020 — 2021", "Soul Book", "Co-founder", "Russia"],
 ];
 
-const skills = [
-  ["Project & product delivery", "Agile delivery & sprint planning", "Roadmaps, scope & priorities", "Risk, issue & dependency management", "Launch planning & execution", "Status reporting & delivery governance"],
-  ["Stakeholders & growth", "Cross-functional leadership", "Client, vendor & team alignment", "Go-to-market & integrated campaigns", "User feedback & community insight", "Partnerships & commercial strategy"],
-  ["AI & automation", "ChatGPT", "Claude", "Make", "Zapier", "AI-assisted research, prototyping & workflows"],
-  ["Workflow systems", "Notion", "Google Workspace", "Airtable", "Asana", "Slack · Loom"],
-  ["Product & collaboration", "Figma", "Miro · Lucidchart", "Trello · MS Project", "Discord", "Digital prototyping & documentation"],
-  ["Creative & web", "Creative direction", "Web design", "Tilda", "Adobe Photoshop & Illustrator", "Clear copy & product education"],
-];
-
 function Arrow() {
   return <span aria-hidden="true">↗</span>;
 }
@@ -246,51 +237,77 @@ export default function Home() {
         <p>It clarifies <em>why it matters</em> — then gets it moving.”</p>
       </section>
 
-      <section className="section experience" id="experience">
-        <div className="section-heading compact" data-reveal>
-          <p className="kicker">Experience</p>
-          <h2>Built across borders.</h2>
+      <section className="operator-board" id="experience" aria-label="Experience, expertise and education">
+        <div className="board-bar">
+          <span className="board-mark">AB.</span>
+          <span>Operating profile</span>
+          <span>Project · Product · Growth</span>
         </div>
-        <div className="timeline" data-reveal>
-          {experience.map(([period, company, role, place]) => (
-            <div className="timeline-row" key={company}>
-              <span className="time-period">{period}</span>
-              <strong>{company}</strong>
-              <span>{role}</span>
-              <span className="place">{place}</span>
+        <div className="board-grid">
+          <article className="board-panel experience-panel" data-reveal>
+            <div className="board-heading"><p>01 / Experience</p><span>↓</span></div>
+            <h2>Work that has to <em>ship.</em></h2>
+            <div className="experience-cards">
+              {experience.map(([period, company, role, place], i) => (
+                <div className={i < 2 ? "experience-card featured" : "experience-card"} key={company}>
+                  <div><span className="period-pill">{period}</span><span className="place-pill">{place}</span></div>
+                  <strong>{company}</strong>
+                  <p>{role}</p>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-      </section>
+          </article>
 
-      <section className="section skills" id="about">
-        <div className="section-heading compact" data-reveal>
-          <p className="kicker">How I work</p>
-          <h2>Practical systems,<br /><em>human judgement.</em></h2>
-        </div>
-        <div className="skills-grid">
-          {skills.map(([title, ...items], i) => (
-            <article key={title} data-reveal style={{ "--delay": `${i * 70}ms` } as React.CSSProperties}>
-              <span>0{i + 1}</span>
-              <h3>{title}</h3>
-              <ul>{items.map((item) => <li key={item}>{item}</li>)}</ul>
-            </article>
-          ))}
+          <article className="board-panel expertise-panel" id="about" data-reveal>
+            <div className="board-heading"><p>02 / Expertise</p><span>↓</span></div>
+            <h2>How I make work <em>move.</em></h2>
+            <div className="expertise-list">
+              <div><strong>Delivery</strong><p>Agile delivery, sprint planning, roadmaps, launch execution, risk and dependency management.</p></div>
+              <div><strong>People</strong><p>Client and vendor alignment, cross-functional work, clear communication and practical decisions.</p></div>
+              <div><strong>Growth</strong><p>Positioning, go-to-market, product education, user feedback, partnerships and community insight.</p></div>
+            </div>
+            <div className="tool-heading"><span>Tools I use every week</span><Arrow /></div>
+            <div className="tool-cloud" aria-label="Tools">
+              {["ChatGPT", "Claude", "Notion", "Google Workspace", "Make", "Zapier", "Airtable", "Asana", "Slack", "Loom", "Figma", "Miro", "Lucidchart", "Trello", "MS Project", "Discord", "Tilda", "Adobe"].map((tool, i) => (
+                <span className={i === 0 || i === 4 || i === 10 ? "is-accent" : ""} key={tool}>{tool}</span>
+              ))}
+            </div>
+          </article>
+
+          <article className="board-panel education-panel" data-reveal>
+            <div className="board-heading"><p>03 / Education</p><span>↓</span></div>
+            <h2>Academic base,<br /><em>entrepreneurial edge.</em></h2>
+            <div className="education-cards">
+              <div className="education-card">
+                <span>2022 — 2023</span>
+                <h3>University of Amsterdam × Vrije Universiteit</h3>
+                <p>MSc Entrepreneurship · Amsterdam Merit Scholarship</p>
+                <strong>8.83 / 10 · cum laude</strong>
+              </div>
+              <div className="education-card">
+                <span>2018 — 2022</span>
+                <h3>Higher School of Economics</h3>
+                <p>BSc International Business & Management</p>
+                <strong>9.52 / 10 · summa cum laude</strong>
+              </div>
+              <div className="education-note">
+                <span>International learning</span>
+                <p>Exchange programmes at Uppsala University and the University of Hertfordshire.</p>
+              </div>
+            </div>
+            <a className="board-cv-link" href={`${basePath}/anastasiia-breiterman-cv.pdf`} target="_blank">View full CV <Arrow /></a>
+          </article>
         </div>
       </section>
 
       <section className="section pmp-feature" id="certification">
         <div className="pmp-badge-panel" data-reveal>
           <p className="kicker">Verified by PMI × Credly</p>
-          <div className="credly-badge-embed">
-            <div
-              data-iframe-width="150"
-              data-iframe-height="270"
-              data-share-badge-id="bf106bb5-dbd1-460e-82c0-2af6b0ce27b0"
-              data-share-badge-host="https://www.credly.com"
-            />
+          <div className="pmp-badge-mark">
+            <img src={`${basePath}/pmp-badge.png`} alt="Project Management Professional PMP badge" />
+            <strong>PMP<sup>®</sup></strong>
+            <span>Project Management Professional</span>
           </div>
-          <script id="credly-badge-script" async src="https://cdn.credly.com/assets/utilities/embed.js" />
           <a className="pmp-verify-link" href="https://www.credly.com/badges/bf106bb5-dbd1-460e-82c0-2af6b0ce27b0/public_url" target="_blank" rel="noreferrer">
             Verify on Credly <Arrow />
           </a>
@@ -319,49 +336,17 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section credentials">
-        <div className="education" data-reveal>
-          <p className="kicker">Education</p>
-          <h2>Academic rigour,<br />entrepreneurial instinct.</h2>
-          <div className="education-item">
-            <span>2022 — 2023</span>
-            <h3>University of Amsterdam × Vrije Universiteit</h3>
-            <p>MSc Entrepreneurship · Amsterdam Merit Scholarship</p>
-            <strong>8.83 / 10 · cum laude</strong>
-          </div>
-          <div className="education-item">
-            <span>2018 — 2022</span>
-            <h3>Higher School of Economics</h3>
-            <p>BSc International Business & Management</p>
-            <strong>9.52 / 10 · summa cum laude</strong>
-          </div>
-          <div className="education-item exchange-item">
-            <span>2021 · International exchange</span>
-            <h3>Uppsala University · Sweden</h3>
-            <p>Exchange mobility programme</p>
-            <strong>HSE Endowment Fund Scholarship</strong>
-          </div>
-          <div className="education-item exchange-item">
-            <span>2020 · International exchange</span>
-            <h3>University of Hertfordshire · United Kingdom</h3>
-            <p>Business Administration exchange</p>
-            <strong>Erasmus+ Key Action 107 Scholarship</strong>
-          </div>
+      <section className="recognition-section">
+        <div data-reveal>
+          <p className="kicker">Selected recognition</p>
+          <h2>Good work<br />has a <em>trail.</em></h2>
         </div>
-        <div className="awards" data-reveal>
-          <p className="kicker">Recognition & awards</p>
-          <ul>
-            <li><span>2026</span><strong>Project Management Professional (PMP)®</strong><small>PMI · AT / AT / AT</small></li>
-            <li><span>2023–24</span><strong>ACE Incubator selected cohort</strong><small>Kintz / HeartLoop</small></li>
-            <li><span>2023</span><strong>Philips Innovation Award semi-finalist</strong><small>Kintz / HeartLoop</small></li>
-            <li><span>2021</span><strong>Published research</strong><small>333-participant study of digital work</small></li>
-            <li><span>2020</span><strong>HSE Startup Ring winner</strong><small>€1,500 grant</small></li>
-            <li><span>2020</span><strong>Oliver Wyman Impact semi-finalist</strong><small>Case championship</small></li>
-            <li><span>2020</span><strong>Award of Excellence</strong><small>Current Trends in Management and Logistics conference</small></li>
-            <li><span>2020</span><strong>Hult Prize semi-final selection</strong><small>London</small></li>
-            <li><span>2019</span><strong>Cup Moscow case championship</strong><small>Top 15% of solutions</small></li>
-            <li><span>—</span><strong>Galina Starovoitova Young Authors Contest winner</strong><small>Scientific work published in the contest collection</small></li>
-          </ul>
+        <div className="recognition-list" data-reveal>
+          <div><span>2026</span><strong>Project Management Professional (PMP)®</strong><small>PMI · Above Target across all domains</small></div>
+          <div><span>2023–24</span><strong>ACE Incubator selected cohort</strong><small>Kintz / HeartLoop</small></div>
+          <div><span>2023</span><strong>Philips Innovation Award semi-finalist</strong><small>Kintz / HeartLoop</small></div>
+          <div><span>2021</span><strong>Published research</strong><small>333-participant study of digital work</small></div>
+          <div><span>2020</span><strong>HSE Startup Ring winner</strong><small>€1,500 grant</small></div>
         </div>
       </section>
 
