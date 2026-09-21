@@ -6,18 +6,18 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://anastasiia-breiterm
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Anastasiia Breiterman, PMP® — Project, Marketing & Growth",
-  description: "Portfolio of Anastasiia Breiterman, PMP®, an international project leader delivering digital products, technology, marketing and events — including 40K+ product installs in four months.",
+  title: "Anastasiia Breiterman, PMP® — Project & Product Manager",
+  description: "Portfolio of Anastasiia Breiterman, PMP®: project and product delivery, business development and product launches across digital products, technology and growth.",
   icons: { icon: `${basePath}/favicon.svg` },
   openGraph: {
-    title: "Anastasiia Breiterman, PMP® — Project · Marketing · Growth",
-    description: "PMP®-certified international project leader. Structured delivery, stakeholder leadership and measurable product growth.",
+    title: "Anastasiia Breiterman, PMP® — Project & Product Manager",
+    description: "PMP®-certified international project and product manager. Structured delivery, stakeholder alignment and product growth.",
     images: [{ url: `${basePath}/og.png`, width: 1200, height: 630, alt: "Anastasiia Breiterman portfolio" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Anastasiia Breiterman, PMP® — Project · Marketing · Growth",
-    description: "PMP®-certified international project leader. Structured delivery, stakeholder leadership and measurable product growth.",
+    title: "Anastasiia Breiterman, PMP® — Project & Product Manager",
+    description: "PMP®-certified international project and product manager. Structured delivery, stakeholder alignment and product growth.",
     images: [`${basePath}/og.png`],
   },
 };

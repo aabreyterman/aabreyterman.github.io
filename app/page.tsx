@@ -10,8 +10,8 @@ const projects = [
     period: "Apr 2025 — present",
     tag: "Fintech · Dubai",
     description:
-      "Drove brand positioning, go-to-market strategy, creative direction, partnerships and retention for a trading psychology platform scaled to 40K+ installs within four months.",
-    metrics: ["40K+ installs", "4 months to 40K+", "1.3K+ community"],
+      "Led positioning, launch planning, product education and growth for a consumer fintech app. Worked in the feedback loop between users, product and marketing as the app reached 40K+ installs in four months.",
+    metrics: ["40K+ installs", "4 months to 40K+", "Product-led growth"],
     link: "https://pnlapp.co/",
     linkLabel: "Explore PnL",
   },
@@ -22,8 +22,8 @@ const projects = [
     period: "Dec 2022 — present",
     tag: "Consumer tech · Amsterdam",
     description:
-      "Led the 0-to-1 brand and product repositioning from HeartLoop to Kintz, shaping the customer proposition, launch strategy and early market presence while advancing through two recognised innovation programmes.",
-    metrics: ["PHIA semi-finalist", "ACE Incubator cohort", "0→1 brand rebuild"],
+      "Co-built a software venture from 0 to 1: defining the proposition, shaping early product direction, coordinating launch work and translating a complex behavioural concept into something users could understand.",
+    metrics: ["0→1 product build", "PHIA semi-finalist", "ACE Incubator cohort"],
     link: "https://kintzapp.com/",
     linkLabel: "Visit Kintz",
   },
@@ -34,8 +34,8 @@ const projects = [
     period: "Sep 2025 — Feb 2026",
     tag: "Growth agency · Tashkent",
     description:
-      "Directed international growth strategy for a boutique digital agency, aligning positioning, paid acquisition, creative production, automation and funnel optimisation around client outcomes.",
-    metrics: ["Global expansion", "Full-funnel strategy", "Creative × performance"],
+      "Led international strategy for a digital agency, connecting positioning, paid acquisition, creative production, automation and funnel optimisation to clear commercial outcomes.",
+    metrics: ["Growth strategy", "Automation", "Creative × performance"],
     link: "https://unika-agency.com/",
     linkLabel: "Visit Unika",
   },
@@ -46,8 +46,8 @@ const projects = [
     period: "Sep 2025 — May 2026",
     tag: "Event technology · Singapore",
     description:
-      "Delivered technology-led event projects across Dubai and Singapore, owning the path from client brief and proposal through project planning, vendor coordination and on-site execution.",
-    metrics: ["2 regional markets", "B2B sales", "End-to-end delivery"],
+      "Delivered technology-led experiences across Dubai and Singapore, moving projects from client brief and proposal through planning, vendor coordination and on-site delivery. Work often combined interactive software, AI-enabled experiences and physical event technology.",
+    metrics: ["Cross-border delivery", "Technical projects", "Client & vendor leadership"],
     link: "https://searix.net/",
     linkLabel: "Visit Searix",
   },
@@ -65,12 +65,12 @@ const experience = [
 ];
 
 const skills = [
-  ["Project delivery", "Agile & predictive methods", "Planning, scope & scheduling", "Risk, issue & dependency management", "Budget & resource coordination", "Status reporting & delivery governance"],
-  ["Stakeholders & leadership", "Cross-functional leadership", "Stakeholder mapping & engagement", "Facilitation & negotiation", "Client, vendor & team alignment"],
-  ["Soft skills", "Communication & collaboration", "Problem-solving & prioritisation", "Adaptability & creative thinking", "Ownership & decision-making"],
-  ["AI & productivity", "ChatGPT & Claude", "Prompt design", "AI-assisted research & analysis", "Content development & workflow automation"],
-  ["Tools", "Notion · Miro · Trello", "MS Project", "Slack · Discord", "Figma · Tilda"],
-  ["Marketing & creative", "Go-to-market & integrated campaigns", "Audience research & community", "PR & partnerships", "Adobe Photoshop & Illustrator"],
+  ["Project & product delivery", "Agile delivery & sprint planning", "Roadmaps, scope & priorities", "Risk, issue & dependency management", "Launch planning & execution", "Status reporting & delivery governance"],
+  ["Stakeholders & growth", "Cross-functional leadership", "Client, vendor & team alignment", "Go-to-market & integrated campaigns", "User feedback & community insight", "Partnerships & commercial strategy"],
+  ["AI & automation", "ChatGPT", "Claude", "Make", "Zapier", "AI-assisted research, prototyping & workflows"],
+  ["Workflow systems", "Notion", "Google Workspace", "Airtable", "Asana", "Slack · Loom"],
+  ["Product & collaboration", "Figma", "Miro · Lucidchart", "Trello · MS Project", "Discord", "Digital prototyping & documentation"],
+  ["Creative & web", "Creative direction", "Web design", "Tilda", "Adobe Photoshop & Illustrator", "Clear copy & product education"],
 ];
 
 function Arrow() {
@@ -180,13 +180,14 @@ export default function Home() {
 
       <section className="hero" id="top">
         <div className="hero-copy" data-reveal>
-          <p className="eyebrow"><span className="pulse" /> PMP® Certified · Project · Marketing · Growth</p>
-          <h1>I turn ambitious ideas into <em>traction.</em></h1>
-          <p className="hero-intro">I’m a PMP®-certified project leader with 5+ years of international experience, translating complex ideas into structured delivery and measurable growth across digital products, technology, marketing and events.</p>
+          <div className="hero-fileline"><span>AB / 2026</span><span>Open to global roles</span></div>
+          <p className="eyebrow"><span className="pulse" /> Project / Product Manager · Business Development</p>
+          <h1>Complex work,<br /><em>made usable.</em></h1>
+          <p className="hero-intro">I’m a PMP®-certified project and product manager with 5+ years of international experience. My work sits where product, delivery, marketing and business development meet: getting the plan clear, the people aligned and the launch out into the world.</p>
           <ul className="hero-competencies" aria-label="Core project management strengths">
-            <li>Project planning & delivery</li>
-            <li>Stakeholder leadership</li>
-            <li>Product & launch execution</li>
+            <li>Project & product delivery</li>
+            <li>Stakeholder alignment</li>
+            <li>Launch & growth execution</li>
           </ul>
           <div className="hero-actions">
             <a className="button primary" href="#work">See selected work <Arrow /></a>
@@ -199,26 +200,26 @@ export default function Home() {
           </a>
         </div>
         <div className="portrait-wrap" data-reveal>
-          <div className="portrait-label"><span>Based across</span><strong>Europe · Middle East · Asia</strong></div>
+          <div className="portrait-label"><span>Built across</span><strong>Europe · Middle East · Asia</strong></div>
           <img src={`${basePath}/anastasiia-portrait-professional-v3.png`} alt="Anastasiia Breiterman" className="portrait" />
           <span className="portrait-number">05+</span>
-          <span className="portrait-caption">years building<br />brands & products</span>
+          <span className="portrait-caption">years moving<br />products & projects</span>
         </div>
         <div className="scroll-note">Scroll to explore <span>↓</span></div>
       </section>
 
       <section className="proof-strip" aria-label="Career highlights">
         <div><strong>40K+</strong><span>Installs in 4 months</span></div>
-        <div><strong>8</strong><span>Platforms managed</span></div>
+        <div><strong>02</strong><span>Digital ventures launched</span></div>
         <div className="proof-pmp"><strong>PMP®</strong><span>Certified professional</span></div>
-        <div><strong>05+</strong><span>Years building products</span></div>
+        <div><strong>05+</strong><span>Years in project & product work</span></div>
       </section>
 
       <section className="section projects" id="work">
         <div className="section-heading" data-reveal>
           <p className="kicker">Selected impact</p>
           <h2>Strategy is only useful when it <em>moves.</em></h2>
-          <p>Four examples of turning ambiguity into launches, growth and cross-border delivery.</p>
+          <p>Four examples of turning ambiguity into launches, stronger products and cross-border delivery.</p>
         </div>
         <div className="project-list">
           {projects.map((project) => (
@@ -237,7 +238,7 @@ export default function Home() {
             </article>
           ))}
         </div>
-        <p className="source-note" data-reveal>Impact figures combine public product data and internal portfolio metrics. Press recognition refers to PnL founder commentary quoted across The Guardian and Business Insider.</p>
+        <p className="source-note" data-reveal>Impact figures combine public product data and internal portfolio metrics.</p>
       </section>
 
       <section className="statement" data-reveal>
@@ -265,7 +266,7 @@ export default function Home() {
       <section className="section skills" id="about">
         <div className="section-heading compact" data-reveal>
           <p className="kicker">How I work</p>
-          <h2>Commercial thinking,<br /><em>creative execution.</em></h2>
+          <h2>Practical systems,<br /><em>human judgement.</em></h2>
         </div>
         <div className="skills-grid">
           {skills.map(([title, ...items], i) => (
