@@ -10,8 +10,8 @@ const projects = [
     period: "Apr 2025 — present",
     tag: "Fintech · Dubai",
     description:
-      "Led positioning, launch planning, product education and growth for a consumer fintech app. Worked in the feedback loop between users, product and marketing as the app reached 45K+ installs in four months and built a 7K+ community across the app, Discord, WhatsApp and Meetup.",
-    metrics: ["45K+ installs", "4 months to 45K+", "7K+ community"],
+      "Led positioning, launch planning, product education and growth for a consumer fintech app. Worked in the feedback loop between users, product and marketing as the app reached 45K+ installs in four months and built a 10K+ community across the app, Substack, Meetup, Discord and WhatsApp.",
+    metrics: ["45K+ installs", "4 months to 45K+", "10K+ community"],
     link: "https://pnlapp.co/",
     linkLabel: "Explore PnL",
   },
