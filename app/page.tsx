@@ -10,8 +10,8 @@ const projects = [
     period: "Apr 2025 — present",
     tag: "Fintech · Dubai",
     description:
-      "Led positioning, launch planning, product education and growth for a consumer fintech app. Worked in the feedback loop between users, product and marketing as the app reached 40K+ installs in four months.",
-    metrics: ["40K+ installs", "4 months to 40K+", "Product-led growth"],
+      "Led positioning, launch planning, product education and growth for a consumer fintech app. Worked in the feedback loop between users, product and marketing as the app reached 45K+ installs in four months and built a 7K+ community across the app, Discord, WhatsApp and Meetup.",
+    metrics: ["45K+ installs", "4 months to 45K+", "7K+ community"],
     link: "https://pnlapp.co/",
     linkLabel: "Explore PnL",
   },
@@ -200,7 +200,7 @@ export default function Home() {
       </section>
 
       <section className="proof-strip" aria-label="Career highlights">
-        <div><strong>40K+</strong><span>Installs in 4 months</span></div>
+        <div><strong>45K+</strong><span>Installs in 4 months</span></div>
         <div><strong>02</strong><span>Digital ventures launched</span></div>
         <div className="proof-pmp"><strong>PMP®</strong><span>Certified professional</span></div>
         <div><strong>05+</strong><span>Years in project & product work</span></div>
