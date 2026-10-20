@@ -7,7 +7,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://anastasiia-breiterm
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: "Anastasiia Breiterman, PMP® — Project, Product & Marketing",
-  description: "Portfolio of Anastasiia Breiterman, PMP®: project and product management, marketing, business development and product launches across digital products and technology.",
+  description: "Portfolio of Anastasiia Breiterman, PMP®, a Dubai-based international project leader delivering digital products, technology, marketing and events — including 50K+ PnL App downloads and a 10K+ community.",
   icons: { icon: `${basePath}/favicon.svg` },
   openGraph: {
     title: "Anastasiia Breiterman, PMP® — Project, Product & Marketing",

@@ -10,8 +10,8 @@ const projects = [
     period: "Apr 2025 — present",
     tag: "Fintech · Dubai",
     description:
-      "Led positioning, launch planning, product education and growth for a consumer fintech app. Worked in the feedback loop between users, product and marketing as the app reached 45K+ installs in four months and built a 10K+ community across the app, Substack, Meetup, Discord and WhatsApp.",
-    metrics: ["45K+ installs", "4 months to 45K+", "10K+ community"],
+      "Led positioning, launch planning, product education and growth for a consumer fintech app. Worked in the feedback loop between users, product and marketing as the app reached 50K+ downloads and built a 10K+ community across the app, Substack, Meetup, Discord and WhatsApp.",
+    metrics: ["50K+ downloads", "10K+ community"],
     link: "https://pnlapp.co/",
     linkLabel: "Explore PnL",
   },
@@ -171,7 +171,7 @@ export default function Home() {
 
       <section className="hero" id="top">
         <div className="hero-copy" data-reveal>
-          <div className="hero-fileline"><span>AB / 2026</span><span>Open to global roles</span></div>
+          <div className="hero-fileline"><span>AB / 2026</span><span>Based in Dubai · Open to global roles</span></div>
           <p className="eyebrow"><span className="pulse" /> Project / Product Management · Marketing · Business Development</p>
           <h1>Complex work,<br /><em>made usable.</em></h1>
           <p className="hero-intro">I’m a PMP®-certified project and product manager with 5+ years of international experience. My work sits where product, delivery, marketing and business development meet: getting the plan clear, the people aligned and the launch out into the world.</p>
@@ -200,7 +200,7 @@ export default function Home() {
       </section>
 
       <section className="proof-strip" aria-label="Career highlights">
-        <div><strong>45K+</strong><span>Installs in 4 months</span></div>
+        <div><strong>50K+</strong><span>PnL App downloads</span></div>
         <div><strong>02</strong><span>Digital ventures launched</span></div>
         <div className="proof-pmp"><strong>PMP®</strong><span>Certified professional</span></div>
         <div><strong>05+</strong><span>Years in project & product work</span></div>
